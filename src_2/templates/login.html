@@ -3,7 +3,7 @@
 {% for error in errors %}
     <p style="color: red">{{ error }}</p>
 {% endfor %}
-<form action="/auth/login" method="post">
+<form action="/login" method="post">
     <p>
         <p><label for="">Email</label></p>
         <input type="email" name="username" value="{{ username }}" required>
