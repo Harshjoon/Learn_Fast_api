@@ -140,11 +140,11 @@ async def login_post(request: Request,db: Session = Depends(get_db)):
     return templates.TemplateResponse("login.html", form.__dict__)
 
 
-# @app.get("/private")
-# def login(request: Request):
-#     return templates.TemplateResponse(
-#         "private.html",
-#         {
-#             "request": request,
-#         }
-#     )
+@app.get("/private")
+def login(request: Request):
+    return templates.TemplateResponse(
+        "private_home.html",
+        {
+            "request": request,
+        }
+    )
